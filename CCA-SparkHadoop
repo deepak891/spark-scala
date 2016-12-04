@@ -1,0 +1,21 @@
+Apache sqoop
+How to validate all the service available are running in VM.
+ps -ef|grep -i manager
+
+and look for ResourceManager & Node manager (yarn and map reduce ) also look for Node
+ps -ef|grep -i node [and look for datanode, secondarynode]
+
+you can also run 
+ps -fu hdfs 
+
+ps -fu yarn
+
+mysql -u retail_dba -p [password cloudera]
+user retail_db;
+show tables;
+
+=========
+Create directory under HDFS
+hadoop -fs -ls /user/cloudera
+
+hadoop -fs -mkdir /user/cloudera/sqoop_import
